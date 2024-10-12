@@ -1,0 +1,4 @@
+
+.details-character__detailsList > *:not(:last-child) {
+    margin-bottom: 10px;
+}
