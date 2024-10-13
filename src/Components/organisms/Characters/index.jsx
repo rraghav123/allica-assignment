@@ -20,7 +20,7 @@ function Characters() {
 
   return (
     <div
-      className="container lg:p-10 xl:p-10 mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3
+      className="lg:p-10 xl:p-10 mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3
         xl:grid-cols-4 gap-4 items-center  justify-center organisms_characters__container no-scrollbar mb-10"
     >
       {data?.results.map((character, index) => (
