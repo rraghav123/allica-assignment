@@ -7,17 +7,24 @@ import MoviesList from "../../molecules/MoviesList/index.jsx";
 import "./index.css";
 
 import { STATICS } from "../Characters/Statics.js";
+import ErrorScreen from "../../atoms/ErrorScreen/index.jsx";
 
 function Details() {
   const { state } = useLocation();
   const id = state?.id;
-  const { data, isLoading } = useGetCharacterDetails(id);
-  if (isLoading) {
+  const { data, isLoading, isError, isRefetching, refetch } =
+    useGetCharacterDetails(id);
+
+  if (isLoading || isRefetching) {
     return <Loader />;
   }
 
+  if (isError) {
+    return <ErrorScreen onRetry={refetch} />;
+  }
+
   return (
-    <div className="p-4 border-x border-y opacity-90 bg-slate-900 mt-10 rounded-lg">
+    <div className="m-5 p-5 lg:p-10 xl:p-10 border-x border-y opacity-90 bg-slate-900 mt-10 rounded-lg">
       <p className="details-character-name text-slate-200 text-5xl text-transparent uppercase">
         {data?.name}
       </p>
