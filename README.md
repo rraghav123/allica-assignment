@@ -24,8 +24,11 @@ To run this project locally, follow these steps:
    ```
 2. **Install dependencies:** <br />
     ```sh
-   npm install
+   npm i --force
    ```
+   we need to run ```--force``` because 
+   ``` "react": "^18.3.1",``` doesn't support
+   ```@testing-library/react-hooks```
    
 3. **Run the Application** <br />
     ```sh
