@@ -1,26 +1,3 @@
-
 .molecules-character {
-    position: relative;
-}
-
-.molecules-character:hover > .molecules-character__name {
-    transform: translateY(10px);
-    transition: transform 0.3s;
-}
-
-
-.molecules-character__name {
-    transform: translateY(50px);
-    transition: transform 0.3s ease-in;
-}
-
-.molecules-character__details {
-    transform: translateY(80px);
-    opacity: 0;
-}
-
-.molecules-character:hover > .molecules-character__details {
-    transform: translateY(0);
-    opacity: 1;
-    transition: all .5s;
+    -webkit-text-stroke: 1px #E38339;
 }

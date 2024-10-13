@@ -1,23 +1,31 @@
-import { useState } from "react";
-import CharacterDetails from "../../atoms/CharacterDetails/index.js";
+import CharacterDetails from "../../atoms/CharacterDetails/index.jsx";
 import EditableModal from "../EditableModal";
 
+import { useEditable } from "../../../hooks/useEditable.js";
+
 function CharacterDetail({ data }) {
-  const [isEditEnabled, setEditEnabled] = useState(false);
-  const [gender, setGender] = useState(data.gender);
+  const { gender, setGender, isEditEnabled, setEditEnabled } = useEditable({
+    gender: data?.gender,
+  });
 
   return (
     <div
-      className={`p-2.5 bg-slate-200 m-4 rounded ${isEditEnabled ? "" : "molecules-character__details"}`}
+      data-testid="molecules-character-detail"
+      className="p-2.5 bg-slate-800 m-4 rounded shadow-[0_0_0_1px_#ffffff1a]"
     >
       <div className="flex gap-4 justify-between">
-        <CharacterDetails label="Gender: " value={gender} />
+        <CharacterDetails
+          label="Gender: "
+          value={gender}
+          valueTestId="character-detail-gender"
+        />
         <CharacterDetails label="DOB: " value={data.birth_year} />
       </div>
       <div className="flex justify-between">
         <button
           className="text-xs text-orange-400 text-end mt-2"
           onClick={handleEdit}
+          data-testid="character-details-edit-button"
         >
           Edit
         </button>

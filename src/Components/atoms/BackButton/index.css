@@ -1,0 +1,20 @@
+
+.atom-back-button {
+  position: relative;
+}
+
+.atom-back-button::before {
+  position: absolute;
+  content: '';
+  height: 10px;
+  width: 2px;
+  background-color: inherit;
+}
+
+.atom-back-button::after {
+  position: absolute;
+  content: '';
+  width: 2px;
+  height: 10px;
+  background-color: inherit;
+}
