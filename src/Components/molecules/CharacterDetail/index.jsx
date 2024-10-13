@@ -1,10 +1,12 @@
-import { useState } from "react";
 import CharacterDetails from "../../atoms/CharacterDetails/index.jsx";
 import EditableModal from "../EditableModal";
 
+import { useEditable } from "../../../hooks/useEditable.js";
+
 function CharacterDetail({ data }) {
-  const [isEditEnabled, setEditEnabled] = useState(false);
-  const [gender, setGender] = useState(data.gender);
+  const { gender, setGender, isEditEnabled, setEditEnabled } = useEditable({
+    gender: data?.gender,
+  });
 
   return (
     <div
