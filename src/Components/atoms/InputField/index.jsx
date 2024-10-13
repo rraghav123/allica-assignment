@@ -1,8 +1,11 @@
 function InputField({ label, value, onChange, id, maxLength }) {
   return (
     <label htmlFor={id} className="cursor-pointer">
-      <p className="text-2xl text-slate-300 mb-4">{label}</p>
+      <p className="text-2xl text-slate-300 mb-4" data-testid="input-label">
+        {label}
+      </p>
       <input
+        data-testid="input-field"
         id={id}
         value={value}
         onChange={(e) => onChange(e.target.value)}

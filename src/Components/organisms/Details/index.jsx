@@ -15,9 +15,12 @@ function Details() {
   if (isLoading) {
     return <Loader />;
   }
+
   return (
     <div className="p-4 border-x border-y opacity-90 bg-slate-900 mt-10 rounded-lg">
-      <p className="text-slate-200 text-5xl">{data?.name}</p>
+      <p className="details-character-name text-slate-200 text-5xl text-transparent uppercase">
+        {data?.name}
+      </p>
       <div className="details-character__detailsList mt-4">
         {STATICS.DATA_TO_SHOW.map(({ label, key }) => (
           <CharacterDetailsItem label={label} value={data?.[key]} key={key} />

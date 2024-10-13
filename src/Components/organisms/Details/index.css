@@ -2,3 +2,7 @@
 .details-character__detailsList > *:not(:last-child) {
     margin-bottom: 10px;
 }
+
+.details-character-name {
+    -webkit-text-stroke: 1px #E38339;
+}

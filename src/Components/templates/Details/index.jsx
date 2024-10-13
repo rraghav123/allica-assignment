@@ -4,7 +4,7 @@ import Details from "../../organisms/Details/index.jsx";
 function DetailsTemplate() {
   return (
     <div className="h-full flex flex-col items-center">
-      <Header />
+      <Header showBack />
       <Details />
     </div>
   );
