@@ -6,6 +6,8 @@
 
 This project is a web application that allows users to explore character details from the Star Wars universe using the swapi.dev API. The application features two main views: a character list view and a character details view. It is built using React, React Query and tailwindcss.
 
+## Demo
+[A demo is worth a thousand words](https://allica-assignment.vercel.app/)
 
 ### Built With
 * [React](https://react.dev/)<br />
