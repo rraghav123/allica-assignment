@@ -1,104 +1,62 @@
-Vite Project Setup
-This project is built using Vite and includes test cases written with Vitest. Follow the instructions below to set up and run the project.
 
-Prerequisites
-Make sure you have the following installed on your machine:
+# Star Wars Character Viewer
 
-Node.js (version 12 or above)
-npm or Yarn
-Getting Started
-Clone the repository:
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-bash
-Copy code
-git clone <repository-url>
-cd <project-directory>
-Install dependencies:
+This project is a web application that allows users to explore character details from the Star Wars universe using the swapi.dev API. The application features two main views: a character list view and a character details view. It is built using React, React Query and tailwindcss.
 
-Use npm or Yarn to install the project dependencies:
 
-bash
-Copy code
-npm install
-Or if you prefer Yarn:
+### Built With
+* [React](https://react.dev/)<br />
+* [ReactQuery](https://tanstack.com/query/v3)<br />
+* [Tailwindcss](https://tailwindcss.com/)<br />
+* [vite](https://vite.dev/)<br />
 
-bash
-Copy code
-yarn install
-Running the Vite Development Server
-To start the Vite development server, run:
 
-bash
-Copy code
-npm run dev
-Or with Yarn:
+<!-- GETTING STARTED -->
+## Getting Started
+To run this project locally, follow these steps:
 
-bash
-Copy code
-yarn dev
-After running the command, open your browser and navigate to http://localhost:3000 (or the port specified in your configuration) to see your application running.
+1. **Clone the repository** <br />
+   ```sh
+   git clone https://github.com/rraghav123/allica-assignment.git
+   ```
+2. **Install dependencies:** <br />
+    ```sh
+   npm install
+   ```
+   
+3. **Run the Application** <br />
+    ```sh
+   npm run dev
+   ```
+4. **Run test cases** <br />
+    ```sh
+   npm run test
+   ```
+## Features
 
-Building the Project
-To create a production build of your application, run:
+1. Character list view
+2. List characters from the Star Wars universe (name, gender &amp; DOB).
+3. Clicking a list item will navigate to the character details page
+4. Character details page will include 
+   * Hair Color
+   * Eye Color
+   * Gender
+   * Home Planet
+   * Movies List
+5. Characters Card at home page has edit button that allows user to edit character gender.
+6. Loading Screens
+7. Error Screens
 
-bash
-Copy code
-npm run build
-Or with Yarn:
 
-bash
-Copy code
-yarn build
-This will create a dist directory containing the production-ready files.
+## Unit Tests
+Unit tests have been implemented for the components to ensure they work as expected. The tests cover:
 
-Running Tests with Vitest
-Writing Tests
-Tests should be placed in the same directory as the files they are testing, or in a dedicated __tests__ directory. Use the .test.js or .spec.js suffix for your test files.
-
-Running Tests
-To run the tests using Vitest, execute:
-
-bash
-Copy code
-npm run test
-Or with Yarn:
-
-bash
-Copy code
-yarn test
-Watching Tests
-To run tests in watch mode, which automatically re-runs tests on file changes, use:
-
-bash
-Copy code
-npm run test:watch
-Or with Yarn:
-
-bash
-Copy code
-yarn test:watch
-Configuration
-Vite Configuration: The Vite configuration can be found in the vite.config.js file.
-Tailwind CSS Configuration: If you are using Tailwind CSS, the configuration can be found in tailwind.config.js.
-Troubleshooting
-If you encounter issues during installation or while running the project, consider the following:
-
-Ensure you have the correct version of Node.js installed.
-
-Clear the npm/Yarn cache:
-
-bash
-Copy code
-npm cache clean --force
-Or for Yarn:
-
-bash
-Copy code
-yarn cache clean
-If you encounter CORS issues after building the project, ensure that you are serving the built files using a local server (e.g., using serve).
-
-Contributing
-Contributions are welcome! Please feel free to submit issues or pull requests.
-
-License
-This project is licensed under the MIT License. See the LICENSE file for more details.
+1. Character list rendering
+2. Character details rendering
+3. Loading states
+4. Unit Test cases for all the components
+5. Integration testing between different components
+   
