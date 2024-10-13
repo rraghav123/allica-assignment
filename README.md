@@ -49,6 +49,7 @@ To run this project locally, follow these steps:
 5. Characters Card at home page has edit button that allows user to edit character gender.
 6. Loading Screens
 7. Error Screens
+8. Retry functionality if api fails
 
 
 ## Unit Tests
