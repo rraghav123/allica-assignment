@@ -39,7 +39,6 @@ describe("MoviesList Component", async () => {
   it("renders the list of movies when data is available", async () => {
     useGetFilms.mockReturnValue(mockResponseMoviesApi);
 
-    // Mock the normalized data
     normalizeData.mockReturnValue({
       isLoading: false,
       data: mockResponseMoviesApi.map((movie) => movie.data),
@@ -57,7 +56,6 @@ describe("MoviesList Component", async () => {
   it("renders the list of movies when out 3 out of 1 api failed", async () => {
     useGetFilms.mockReturnValue(errorMockResponseMoviesApi);
 
-    // Mock the normalized data
     normalizeData.mockReturnValue({
       isLoading: false,
       data: errorMockResponseMoviesApi.filter((movie) => movie.data),
@@ -77,7 +75,6 @@ describe("MoviesList Component", async () => {
   it("renders the list of movies when out 3 out of 1 api failed", async () => {
     useGetFilms.mockReturnValue(errorMockResponseMoviesApi);
 
-    // Mock the normalized data
     normalizeData.mockReturnValue({
       isLoading: false,
       data: errorMockResponseMoviesApi.filter((movie) => movie.data),
@@ -97,7 +94,6 @@ describe("MoviesList Component", async () => {
   it("handles the case where no movies are passed", async () => {
     useGetFilms.mockReturnValue([]);
 
-    // Mock the normalized data
     normalizeData.mockReturnValue({
       isLoading: false,
       data: [],

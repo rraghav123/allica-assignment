@@ -1,18 +1,13 @@
 import { render, screen } from "@testing-library/react";
 import { describe, it, expect, vi, beforeEach } from "vitest";
 import "@testing-library/jest-dom";
-import {
-  useGetCharacterDetails,
-  useGetCharactersList,
-} from "../../../generalQuery.js";
+import { useGetCharactersList } from "../../../generalQuery.js";
 
 import { mockResponseCharacters } from "../../../test/mockData.js";
 
 import Characters from "./index.jsx";
 import Character from "../../molecules/Character/index.jsx";
 import ErrorScreen from "../../atoms/ErrorScreen/index.jsx";
-import { useLocation } from "react-router-dom";
-import Details from "../Details/index.jsx";
 
 vi.mock("../../../generalQuery.js", () => ({
   useGetCharactersList: vi.fn(),
@@ -93,7 +88,7 @@ describe("Characters Component", async () => {
 
     const { unmount } = render(<Characters />);
 
-    expect(screen.getByTestId("error-screen")).toBeVisible(); // Check if the loader is visible
+    expect(screen.getByTestId("error-screen")).toBeVisible();
 
     unmount();
   });
@@ -131,6 +126,6 @@ describe("Characters Component", async () => {
 
     render(<Characters />);
 
-    expect(screen.queryByTestId("character-details-item")).toBeNull(); // Assert that no Character component is rendered
+    expect(screen.queryByTestId("character-details-item")).toBeNull();
   });
 });

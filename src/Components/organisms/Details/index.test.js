@@ -55,7 +55,7 @@ describe("Details Component", () => {
 
     const { unmount } = render(<Details />);
 
-    expect(screen.getByTestId("loader")).toBeVisible(); // Check if the loader is visible
+    expect(screen.getByTestId("loader")).toBeVisible();
 
     unmount();
   });
@@ -78,7 +78,6 @@ describe("Details Component", () => {
   it("renders error screen if API fails", async () => {
     const refetch = vi.fn();
 
-    // Mock the useLocation hook
     useLocation.mockReturnValue({ state: { id: 1 } });
 
     useGetCharacterDetails.mockReturnValue({
@@ -110,7 +109,7 @@ describe("Details Component", () => {
 
     const { unmount } = render(<Details />);
 
-    expect(screen.getByTestId("error-screen")).toBeVisible(); // Check if the loader is visible
+    expect(screen.getByTestId("error-screen")).toBeVisible();
 
     unmount();
   });

@@ -1,7 +1,7 @@
 import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
-import "@testing-library/jest-dom"; // For custom matchers like toBeInTheDocument and toHaveAttribute
-import Loader from "./index.jsx"; // Adjust the path to your Loader component
+import "@testing-library/jest-dom";
+import Loader from "./index.jsx";
 
 describe("Loader Component", () => {
   it("renders", () => {

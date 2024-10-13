@@ -18,7 +18,6 @@ vi.mock("react-router-dom", async () => {
 
 describe("Character Component", async () => {
   afterEach(() => {
-    // Clear mock calls after each test
     mockedUseNavigate.mockClear();
   });
   it("Character Component is Rendered", async () => {

@@ -17,7 +17,6 @@ vi.mock("react-router-dom", async () => {
 
 describe("Header Component", () => {
   afterEach(() => {
-    // Clear mock calls after each test
     mockedUseNavigate.mockClear();
   });
   it("renders", () => {

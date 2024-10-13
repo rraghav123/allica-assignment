@@ -26,7 +26,7 @@ vi.mock(
 
 describe("generalQuery", () => {
   beforeEach(() => {
-    queryClient.clear(); // Clear query client before each test
+    queryClient.clear();
   });
   describe("useGetCharactersList", () => {
     it("fetches characters list successfully", async () => {

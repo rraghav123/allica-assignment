@@ -23,14 +23,12 @@ vi.mock("@tanstack/react-query", () => ({
 
 describe("App Component", () => {
   it("renders the RouterProvider correctly", () => {
-    // Render the App component
     render(<App />);
 
     expect(createBrowserRouter).toHaveBeenCalledWith(routers);
   });
 
   it("renders the  QueryClientProvider correctly", () => {
-    // Render the App component
     render(<App />);
 
     expect(QueryClientProvider).toHaveBeenCalledWith(
